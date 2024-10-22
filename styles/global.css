@@ -1,0 +1,48 @@
+ /* rem - Root Element Measure. 1rem = 16px (padrão) 
+  Pra comparar com tamanho em pixels, podemos fazer a divisão por 16
+  Por exemplo: para converter 16px em rem divide 16 por 16, que é igual a 1 (16/16=1)
+  Pra converter 14px -> 14/16=0.875rem | 8px -> 8/16=0.5rem
+  Essa medida relativa ajuda na acessibilidade pois, navegadores têm a opção de aumentar 
+  ou diminuir o tamanho das fontes conforme a necessidade de usuário. Se utilizar uma medida fixa
+  como, por exemplo, a quantidade de pixels, o navegador não consegue controlar o tamanho da fonte
+  e isso torna a acessibilidade do site ruim */ 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-family: 'Poppins', sans-serif;
+  --text: 400 1rem/1.5 var(--font-family);
+  --text-sm: 400 .875rem/1.4 var(--font-family);
+  
+  --text-primary: #292524;
+  --text-secondary: #57534E;
+  --text-tertiary: #8F8881;
+  --text-highlight: #E43A12;
+
+  --surface-primary: #FFFFFF;
+  --surface-secondary: #FEE7D6;
+
+  --stroke-default: #D6D3D1;
+  --stroke-hightlight: #F3541C;
+  --semantic-error: #DC2626;
+}
+
+body {
+  overflow: hidden;
+
+  font: var(--text);
+  color: var(--text-secondary);
+}
+
+h1, h2 {
+  color: var(--text-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
